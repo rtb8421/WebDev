@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio</title>
+</head>
+<style>
+   body {
+      background-image: linear-gradient(90deg, white 40%, rgb(1, 1, 84) 20%);
+      background-repeat: no-repeat;
+      height: 700px;
+   }
+
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+   }
+
+   .nav li {
+      color: white;
+      list-style: none;
+      transition: all .5s ease;
+      width: 100px;
+      cursor: pointer;
+   }
+
+   .nav li:hover
+    {
+      color: aqua;
+      /* text-decoration: underline; */
+   }
+   .nav li:active{
+      text-decoration: underline;
+
+   }
+
+   .nav {
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+
+   }
+
+   .logo {
+      margin-left: 100px;
+      font-weight: 900;
+      font-size: 35px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+
+   main {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+   }
+
+   div img {
+      height: 360px;
+      width: 360px;
+      border-radius: 50%;
+      border: 25px solid rgb(255, 255, 255);
+      margin-left: 300px;
+      outline: 20px solid rgb(1, 1, 84);
+      object-fit: cover;
+   }
+
+   .content h2 {
+      color: aqua;
+      font-size: 25px;
+      /* margin: 2px; */
+      /* border: 2px solid red; */
+
+   }
+
+   h1,h2, p {
+      /* border: 2px solid red; */
+      margin: 0;
+   }
+
+   .social {
+      height: 40px;
+      width: 40px;
+      background-color: white;
+      border: none;
+      /* border: 3px solid rgb(13, 205, 235); */
+      border-radius: 50%;
+      color: white;
+      transition: all ease-out .4s;
+      margin-left: 20px;
+      padding:0;
+   }
+
+   .so {
+      margin-top: 15px;
+      padding: 10px;
+
+   }
+
+   .cv {
+      width: 150px;
+      height: 40px;
+      background-color: aquamarine;
+      border-radius: 20px;
+      transition: ease-out .6s;
+   }
+
+   .social:hover {
+       background-color: rgba(40, 40, 231, 0.765);
+      cursor: pointer;
+      box-shadow: 0 0 20PX red;
+   }
+
+   .cv:hover {
+      box-shadow: 0 0 20px blue;
+      cursor: pointer;
+   }
+
+   ul {
+      margin-right: 100px;
+   }
+</style>
+
+<body>
+   <header>
+      <div class="logo">RTB</div>
+      <ul class="nav">
+         <a href="Portfolio.html" target="_blank">
+            <li>Home</li>
+         </a>
+         <a href="About.html" target="_blank">
+            <li>About</li>
+         </a>
+
+         <a href="Portfolio.html" target="_blank">
+            <li>Service</li>
+         </a>
+         <a href="https://github.com/rtb8421/OIBSIP-JAVA-TASK-2" target="_blank">
+            <li>Project</li>
+         </a>
+         <a href="https://www.linkedin.com/in/rohan-kumar-patel" target="_blank">
+            <li>Contact</li>
+         </a>
+      </ul>
+   </header>
+   <main>
+      <div class="image">
+         <img src="Image.jpg" alt="Photo">
+      </div>
+      <div class="content" style="width: 500px; text-align: end; margin-top: 70px;margin-right: 70px;">
+         <h1 style="color: white;">Hi, im Rohan Patel</h1>
+         <h2>Frontend Developer</h2>
+         <p style="color: white;">
+            Seeking a challenging and responsible position in an organization where i can learn and utilize my skills to
+            the success of the organization.
+         </p>
+         <div class="so">
+
+            <a href="https://www.facebook.com/profile.php?id=100012584923286&mibextid=avESrC" target="_blank"><img src="Facebook-logo.jpg" class="social"></a>
+            <a href="https://twitter.com/rohan_leen?s=09" target="_blank"><img class="social" src="Twitter.png" class="social"></a>
+            <a href="https://instagram.com/__mr.mute__?igshid=MzMyNGUyNmU2YQ==" target="_blank"><img
+                  src="instagram.png" class="social"></a>
+            <a href="https://www.linkedin.com/in/rohan-kumar-patel" target="_blank"><img
+                  src="Linkedin.jpeg" class="social"></a>
+                  <a href="https://github.com/rtb8421" target="_blank"><img src="github.png" class="social"></a>
+            <br>
+            <a href="https://drive.google.com/file/d/1n5rL4vVmC1rHwmSIlTdNancmJiATtpOL/view?usp=drivesdk"
+               target="_blank"><button class="cv so">Dowload CV</button></a>
+         </div>
+      </div>
+   </main>
+</body>
+
+</html>

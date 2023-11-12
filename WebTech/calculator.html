@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(aqua,white);
+            background-repeat: no-repeat;
+            
+        }
+        button{
+            height: 60px;
+            width: 60px;
+            margin: 5px;
+            border-radius: 10px;
+            font-size: large;
+            cursor: pointer;
+        }
+        input{
+            width: 270px;
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.6);
+            font-size: 20px;
+        }
+        .operator{
+            background-color: rgb(0, 0, 0);
+           color:white;
+           font-size: large;
+        }
+        .operator:hover{
+            box-shadow:0 0 20px rgb(0, 0, 0) ;
+            font-size: larger;
+            transition: ease-in-out .5s ;
+        }
+        .Number{
+            background-color: rgba(0, 0, 0, 0.877);
+            color:white;
+            transition: ease-out .4s ;
+        }
+        .Number:hover{
+            box-shadow: 0 0 20px rgb(0, 0, 0);
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Calculator</h1>
+        
+       <input type="text" ><br>
+        <button onclick="" class="operator">C</button>
+        <button onclick="" class="operator">%</button>
+        <button onclick="" class="operator" >Bac</button>
+        <button onclick="" class="operator">/</button>
+        <br>
+        <button onclick="7" class="Number">7</button>
+        <button onclick="8" class="Number">8</button>
+        <button onclick="9" class="Number">9</button>
+        <button onclick="" class="operator">*</button>
+        <br>
+        <button class="Number">4</button>
+        <button class="Number">5</button>
+        <button class="Number">6</button>
+        <button class="operator">-</button>
+        <br>
+        <button class="Number">1</button>
+        <button class="Number">2</button>
+        <button class="Number">3</button>
+        <button class="operator">+</button>
+        <br>
+        <button class="Number">00</button>
+        <button class="Number">0</button>
+        <button class="Number">.</button>
+        <button class="operator">=</button>
+        
+    </div>
+</body>
+</html>
