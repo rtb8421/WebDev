@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+
+     <style>
+        .container{
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(228, 224, 218);   
+            margin-top: 10%;
+        }
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form action="" class="container">
+            <h1>Hotel Room Reservation</h1>
+
+            <label for="">Name:</label>
+            <input type="text" required><br><br>
+            <label for="">Email:</label>
+            <input type="email" required><br><br>
+            <label for="">Phone:</label>
+            <input type="number" required><br><br>
+            <label for="">Check In:</label>
+            <input type="time" required><br><br>
+            <label for="">Check Out:</label>
+            <input type="time" required><br><br>
+            <label for="">Room Type:</label>
+            <select name="Room type" id="Room">
+                <option value="single">Single</option>
+                <option value="doble">Double</option>
+                <option value="family">Family</option>  
+            </select><br><br><br>
+
+            <input type="submit" value="Submit Reservation">
+        </form>
+    </center>
+</body>
+</html>

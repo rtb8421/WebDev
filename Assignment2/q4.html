@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation</title>
+
+    <style>
+         .container{
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            background-color:white;
+            margin-top: 10%;
+        }
+        body{
+            background-color: rgb(102, 199, 231);
+        }
+        .head{
+            color: white;
+            background-color: rgb(22, 22, 90);
+        }
+        .sub{
+            background-color: blue;
+            color: white;
+            border-radius: 15px;
+            margin-left: 65%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form action="" class="container">
+            <h1 class="head">Ticket Booking Form</h1>
+
+            <label for="">Name:</label>
+            <input type="text" placeholder="Enter your name" required><br><br>
+            <label for="">Email:</label>
+            <input type="email" placeholder="Enter your mail"><br><br>
+            <label for="">Phone:</label>
+            <input type="number" max="12" placeholder="Enter your phone number"><br><br>
+            <label for="">Booking Date & Time:</label>
+            <input type="date" placeholder="Date & Time" required><br><br>
+            <label for="">Choose Ticket Type:</label>
+            <p>
+                Standard : <input type="radio" name="Ticket" id="Standard">
+                VIP : <input type="radio" name="Ticket" id="VIP">
+            </p>
+            <label for="">Number Of Tickets</label>
+            <input type="number" required><br><br>
+
+            <label for="">Additional Comments</label>
+            <textarea></textarea>
+            
+            <br><br><br>
+
+            <input type="submit" value="Submit" class="sub">
+        </form>
+    </center>
+</body>
+</html>

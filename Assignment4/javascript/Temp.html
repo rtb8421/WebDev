@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempreture</title>
+</head>
+<body>
+    
+    <input type="number" id="val" placeholder="Enter Tempreture">
+    <select onchange="result()" name="opr1" id="opr">
+    <option value="1">celcius</option>
+    <option value="2">Farenheit</option>
+    <option value="3">kelvin</option>
+</select>
+<input type="text" id="res" placeholder="converted result">
+   
+</select>
+
+<script>
+    let val=document.getElementById("val");
+    let res=document.getElementById("res");
+    let opr1=document.getElementById("opr");
+
+    function result()
+    { 
+        switch (opr1.value)
+        {
+
+            case "1": res.value=val.value;
+            break;
+
+            case "2": res.value=val.value*(9/5)+32;
+            break;
+
+            case "3": res.value=val.value*(1)+273.15;
+            break;
+
+            default :console.log("wrong entry") 
+        }
+
+    }
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style></style>
+  <body>
+    <center>
+      <div>
+        <h1>this is a heading</h1>
+        <ul style="border: 2px solid red; height: 200px">
+          <li>hello</li>
+        </ul>
+        <button onclick="show()" onmouseout="change()" onmouseover="changee()">
+          click to change
+        </button>
+      </div>
+    </center>
+
+    <script>
+      let h = document.getElementsByTagName("h1")[0];
+      let btn = document.getElementsByTagName("button")[0];
+
+      // alert(h+"   "+btn)
+      //  let x= prompt("enter your age"," ");
+      //  console.log(x);
+
+      function show() {
+        alert("click ho raha hai");
+        let t = document.getElementsByTagName("ul")[0];
+        let li = document.createElement("li");
+        t.appendChild(li);
+        let name = prompt("enter your name", "");
+        li.textContent = name;
+      }
+
+      // console.log(h+""+btn);
+      // document.write(h+""+btn);
+
+      //   h.innerHTML = "<i>hello</i>";
+      //   h.textContent="<i>hello</i>";
+      //   btn.textContent="button"
+
+      // confirm("do you want to submit")
+
+      function change() {
+        // let date = new Date();
+        // alert("click ho gaya")
+        h.style.color = "green";
+      }
+      function changee() {
+        // alert("click ho gaya")
+        h.style.color = "red";
+      }
+
+      console.log();
+    </script>
+  </body>
+</html>

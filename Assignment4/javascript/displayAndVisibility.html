@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYle>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background: aqua;
+    }
+    div:nth-child(1){
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        /* display: none; */
+        visibility: hidden;
+    }
+    div:nth-child(2){
+        height: 200px;
+        width: 200px;
+        background-color: rgb(0, 42, 255);
+    }
+
+</STYle>
+<body>
+    <div>
+        <button>click me to hide me</button>
+    </div>
+    <div>
+
+
+    </div><br>
+    <button >click</button>
+    <script>
+        let div1=document.getElementsByTagName("div")[0];
+        var btn1=document.getElementsByTagName("button")[0];
+        var btn=document.getElementsByTagName("button")[1];
+
+        btn.addEventListener("click",function(){
+            div1.style.visibility="visible"
+        })
+        btn1.addEventListener("click",function(){
+            btn1.style.display="none";
+        })
+
+    </script>
+</body>
+</html>

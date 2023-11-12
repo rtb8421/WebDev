@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Addition of two numbers :</h1>
+    <h1></h1>
+    <button onclick="add()">Click to add</button>
+
+    <script>
+      let button = document.getElementsByTagName("button")[0];
+      let h = document.getElementsByTagName("h1")[1];
+
+      function add() {
+        let a = prompt("Enter 1st number");
+        let b = prompt("Enter 2nd number");
+
+        let c = Number(a) + Number(b);
+        
+
+
+        h.textContent = c;
+      }
+    </script>
+  </body>
+</html>

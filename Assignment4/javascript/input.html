@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conerter</title>
+</head>
+<body>
+    <input type="number"id="first" placeholder=" INDIAN VALUE">
+    <select id="change" onchange="result()">
+    <option value="xyz">currency</option>
+    <option value="DLR">Dollar</option>
+    <option value="INR">Rupee</option>
+    <option value="RBL">Rubal</option>
+    <option value="YEN">Yen</option></select>
+    <input type="text" id="result" placeholder="result">
+    <script>
+let input=document.getElementById("first");
+let re=document.getElementById("result");
+let operation=document.getElementById("change");
+
+function result(){
+     switch(operation.value){
+        case "xyz": input.value="";re.value="";
+        break;
+        case "DLR":
+                    re.value= input.value*0.012+" in dollar";
+        break;
+        case "INR": 
+                    re.value= input.value*1+" in Rupee";
+        break;
+        case "RBL": 
+                    re.value= input.value*1.11+" in rubal";
+        break;
+        case "YEN": 
+                    re.value= input.value*1.81+" in Yen";
+        break;
+         default:alert("Wrong entry");
+
+     }
+}
+    </script>
+</body>
+</html>
