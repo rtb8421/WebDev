@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .converter {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Unit Converters</h1>
+
+
+<div class="converter">
+    <h2>Length Converter</h2>
+    <label for="lengthInput">Enter Length:</label>
+    <input type="number" id="lengthInput">
+    <select id="lengthFrom">
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="km">Kilometers</option>
+    </select>
+    <span>to</span>
+    <select id="lengthTo">
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="km">Kilometers</option>
+    </select>
+    <button onclick="convertLength()">Convert</button>
+    <p id="lengthResult"></p>
+</div>
+
+
+<div class="converter">
+    <h2>Temperature Converter</h2>
+    <label for="tempInput">Enter Temperature:</label>
+    <input type="number" id="tempInput">
+    <select id="tempFrom">
+        <option value="c">Celsius</option>
+        <option value="f">Fahrenheit</option>
+    </select>
+    <span>to</span>
+    <select id="tempTo">
+        <option value="c">Celsius</option>
+        <option value="f">Fahrenheit</option>
+    </select>
+    <button onclick="convertTemperature()">Convert</button>
+    <p id="tempResult"></p>
+</div>
+
+
+<div class="converter">
+    <h2>Weight Converter</h2>
+    <label for="weightInput">Enter Weight:</label>
+    <input type="number" id="weightInput">
+    <select id="weightFrom">
+        <option value="kg">Kilograms</option>
+        <option value="g">Grams</option>
+        <option value="lb">Pounds</option>
+    </select>
+    <span>to</span>
+    <select id="weightTo">
+        <option value="kg">Kilograms</option>
+        <option value="g">Grams</option>
+        <option value="lb">Pounds</option>
+    </select>
+    <button onclick="convertWeight()">Convert</button>
+    <p id="weightResult"></p>
+</div>
+
+<script>
+   
+    function convertLength() {
+        const lengthInput = document.getElementById('lengthInput').value;
+        const lengthFrom = document.getElementById('lengthFrom').value;
+        const lengthTo = document.getElementById('lengthTo').value;
+
+       
+        if (lengthFrom === 'm' && lengthTo === 'cm') {
+            document.getElementById('lengthResult').innerText = lengthInput * 100 + ' Centimeters';
+        } else if (lengthFrom === 'cm' && lengthTo === 'm') {
+            document.getElementById('lengthResult').innerText = lengthInput / 100 + ' Meters';
+        } else if (lengthFrom === 'km' && lengthTo === 'm') {
+            document.getElementById('lengthResult').innerText = lengthInput * 1000 + ' Meters';
+        }
+   
+
+    }
+
+  
+    function convertTemperature() {
+       
+    }
+
+    function convertWeight() {
+        
+    }
+</script>
+
+</body>
+</html>

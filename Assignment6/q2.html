@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Test Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #020b03;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input{
+            margin: 5%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Entrance Test Exam</h1>
+    </header>
+    <center>
+        <h2>Each Question having 25 marks</h2>
+        <h3>Full Mark:50</h3>
+    </center>
+    <section>
+        <form id="examForm">
+            <label>1.what is the Quantum of light ?</label>
+            <input type="radio" name="q1" value="photon"> photon
+            <input type="radio" name="q1" value="neutron"> Neutron
+            <input type="radio" name="q1" value="electron"> Electron
+            
+
+            <label>2. what is the Quantum of Electricity ?</label>
+            <input type="radio" name="q2" value="neutron"> Neutron
+            <input type="radio" name="q2" value="electron"> Electron
+            <input type="radio" name="q2" value="atom"> Atom
+
+            <br>
+            <button type="button" onclick="calculateScore()">Submit</button>
+        </form>
+            
+        <div id="result"></div>
+    </section>
+
+    <script>
+        function calculateScore() {
+            const form = document.getElementById("examForm");
+            const resultDiv = document.getElementById("result");
+            const totalQuestions = 2; 
+
+            let score = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+
+                if (selectedOption) {
+                    const userAnswer = selectedOption.value;
+
+                    
+                    const correctAnswer = i === 1 ? "photon" : (i === 2 ? "electron" : "");
+
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+            }
+
+            resultDiv.innerHTML = `Your score: ${score} out of ${totalQuestions}`;
+        }
+    </script>
+
+</body>
+</html>

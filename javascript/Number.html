@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body{
+            margin-top: 10%;
+            background-color: antiquewhite;
+        }
+        div{
+            box-shadow: 0 0 2rem black;
+            height: 400px;
+            width: 400px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        
+        <div>
+        <h1>Number Guessing Game</h1>
+        <input type="number">
+        <button>Click</button>
+
+            <h1>Result</h1>
+            <h1></h1>
+            
+
+    </div>
+    
+</center>
+<script>
+    let a=document.getElementsByTagName("Button")[0];
+    let b=document.getElementsByTagName("h1")[2];
+    let c=document.getElementsByTagName("input")[0];
+
+    let rand= Math.random()*10;
+    rand=Math.floor(rand)
+    a.addEventListener("click",function(){
+        if(c.value==rand){
+            b.innerHTML="You Guess the exact number"
+        }
+       else if(c.value<rand){
+            b.innerHTML="value is too low "
+        }
+       else{
+            b.innerHTML="value is too high "
+        }
+    })
+</script>
+        
+</body>
+</html>

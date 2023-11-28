@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reservation Inquiry System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #reservationDetails {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Airline Reservation Inquiry System</h1>
+    </header>
+
+    <section>
+        <form id="reservationForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="passport">Passport Number:</label>
+            <input type="number" id="passport" name="passport" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="" disabled selected>Select Destination</option>
+                <option value="Kolkata">kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+            <br>
+            <button type="button" onclick="submitReservation()">Submit Reservation</button>
+        </form>
+
+        <div id="reservationDetails"></div>
+    </section>
+
+    <script>
+        function submitReservation() {
+            const form = document.getElementById("reservationForm");
+            const detailsDiv = document.getElementById("reservationDetails");
+
+            const fullName = form.elements.fullName.value;
+            const passport = form.elements.passport.value;
+            const phone = form.elements.phone.value;
+            const destination = form.elements.destination.value;
+
+            if (fullName && passport && phone && destination) {
+                detailsDiv.innerHTML = `
+                    <h2>Reservation Details</h2>
+                    <p><strong>Name:</strong> ${fullName}</p>
+                    <p><strong>passport number:</strong> ${passport}</p>
+                    <p><strong>Phone:</strong> ${phone}</p>
+                    <p><strong>Destination:</strong> ${destination}</p>
+                `;
+            } else {
+                detailsDiv.innerHTML = "<p>Please fill out all the fields.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>

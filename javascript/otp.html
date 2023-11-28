@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        body{
+            margin-top: 10%;
+            background-color: rgb(77, 57, 174);
+        }
+        div{
+            box-shadow: 0 0 2rem black;
+            height: 400px;
+            width: 400px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        
+        <div>
+        <h1>OTP Generation</h1>
+        <input type="number">
+        <button>Click</button>
+
+            <h2>Result</h2>
+            <h3></h3>
+    </div>
+</center>
+<script>
+    let a=document.getElementsByTagName("Button")[0];
+    let c=document.getElementsByTagName("input")[0];
+    let b=document.getElementsByTagName("h3")[0];
+
+    function getotp(){
+
+        let otp= Math.random()*10000;
+        otp=Math.floor(otp);
+        // otp=String(otp);
+        // console.log(otp);
+    }
+    a.addEventListener("click",function(){
+        if(c.value===otp){
+            b.innerHTML="Verified Successfull"
+        }
+       else{
+            b.innerHTML="Wrong OTP Try again! "
+            alert(otp)
+        }
+    })
+
+
+    // let x="123";
+    // let y=123;
+    
+    // if(x===y){
+    //     console.log("equal")
+    // }
+    // else 
+    //   console.log("not equal")
+
+   
+</script>
+</script>
+</body>
+</html>

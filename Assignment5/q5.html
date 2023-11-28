@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORONA DASHBOARD ODISHA</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url(corona.webp);
+    background-size: cover;
+    font-size: 18px;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+/* footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CORONA DASHBOARD ODISHA</h1>
+    </header>
+
+    <section id="prerequisites">
+        <h2>Pre-requisites</h2>
+        <p>Ensure you have the following before proceeding:</p>
+        <ul>
+            <li>Valid ID Proof</li>
+            <li>Medical History</li>
+            <li>Mask and Sanitizer</li>
+        </ul>
+    </section>
+
+    <section id="vaccination-booking">
+        <h2>Vaccination Slot Booking</h2>
+        Aadhar Number: <input type="number">
+        <form action="booking-handler.php" method="post">
+            <label for="date">Choose Date & Time</label>
+            
+            <input type="date">
+            <input type="time">
+
+            <label for="place">Select Vaccination Center:</label>
+            <select id="place" name="place">
+                
+                <option value="Center A">Sambalpur</option>
+                <option value="Center B">Burla</option>
+               
+            </select>
+            <input type="submit" value="Book Slot">
+        </form>
+    </section>
+
+        <p>&copy; 2023 CORONA DASHBOARD ODISHA. All rights reserved.</p>
+
+</body>
+</html>
+

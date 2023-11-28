@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unit Converters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+    }
+    input{
+        margin: 0.5%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Unit Converters</h1>
+<fieldset>
+    <legend>Currency Converter</legend>
+    <input type="number"id="first" placeholder=" Rupee Value">
+    <select id="change" onchange="result()">
+    <option value="xyz">currency</option>
+    <option value="DLR">Dollar</option>
+    <option value="INR">Rupee</option>
+    <option value="RBL">Rubal</option>
+    <option value="YEN">Yen</option></select>
+    <input type="text" id="result" placeholder="result"> <br>
+    <input type="number" id="second" placeholder="Dollar Value">
+    <select id="change" onchange="result()">
+    <option value="xyz">currency</option>
+    <option value="DLR">Dollar</option>
+    <option value="INR">Rupee</option>
+    <option value="RBL">Rubal</option>
+    <option value="YEN">Yen</option></select>
+    <input type="text" id="result" placeholder="result"> <br>
+    <input type="number" id="third" placeholder="Rubal Value">
+    
+    <select id="change" onchange="result()">
+    <option value="xyz">currency</option>
+    <option value="DLR">Dollar</option>
+    <option value="INR">Rupee</option>
+    <option value="RBL">Rubal</option>
+    <option value="YEN">Yen</option></select>
+    <input type="text" id="result" placeholder="result"><br>
+    <input type="number" id="fourth" placeholder="Yen Value">
+</fieldset>
+
+<fieldset>
+  <legend>Length Converter</legend>
+  <input type="number" id="lengthInput" placeholder="Enter length in meters"><br>
+  <input type="number" id="lengthInput2" placeholder="Enter length in feet"><br>
+  <input type="number" id="lengthInput3" placeholder="Enter length in inches">
+  <select id="lengthUnit">
+    <option value="meters">Meters</option>
+    <option value="feet">Feet</option>
+    <option value="inches">Inches</option>
+  </select>
+  <span>to</span>
+  <select id="lengthTo">
+      <option value="m">Meters</option>
+      <option value="cm">Feet</option>
+      <option value="km">Inches</option>
+  </select>
+  <button onclick="convertLength()">Convert</button>
+  <p id="lengthResult"></p>
+</fieldset>
+
+<fieldset>
+  <legend>Temperature Converter</legend>
+  <input type="number" onkeyup="convertTemperature()" id="tempInput" placeholder="Enter Tempreture in celcius"><br>
+  <select onchange="convertTemperature()" id="tempUnit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+  </select>
+  <!-- <button onclick="convertTemperature()">Convert</button> -->
+  <p id="tempResult"></p>
+</fieldset>
+
+<fieldset>
+    <legend>Weight Converter</legend>
+    <input type="number" onkeyup="start()" id="weightInput" placeholder="Enter Weight" />
+    <select  id="weight">
+        <option value="kil">Kilograms</option>
+        <option value="po">Pounds</option>
+        <option value="grm">grams</option>
+    </select>
+    to
+    <select onchange="start()" id="weightUnit">
+        <option value="kilograms">Kilograms</option>
+        <option value="pounds">Pounds</option>
+        <option value="grams">grams</option>
+    </select>
+    <input type="text" id="weightResult" placeholder="result">
+   
+</fieldset>
+<script>
+
+let input=document.getElementById("first");
+let re=document.getElementById("result");
+let operation=document.getElementById("change");
+
+function result(){
+     switch(operation.value){
+        case "xyz": input.value="";re.value="";
+        break;
+        case "DLR":
+                    re.value= input.value*0.012+" in dollar";
+        break;
+        case "INR": 
+                    re.value= input.value*1+" in Rupee";
+        break;
+        case "RBL": 
+                    re.value= input.value*1.11+" in rubal";
+        break;
+        case "YEN": 
+                    re.value= input.value*1.81+" in Yen";
+        break;
+         default:alert("Wrong entry");
+
+     }
+}
+
+  function convertLength() {
+    let lengthInput = parseFloat(document.getElementById('lengthInput').value);
+    let lengthUnit = document.getElementById('lengthUnit').value;
+    let result;
+
+    switch (lengthUnit) {
+      case 'meters':
+        result = lengthInput + ' Meters';
+        break;
+      case 'feet':
+        result = (lengthInput * 3.28084) *2 + ' Feet';
+        break;
+      case 'inches':
+        result = (lengthInput * 39.3701) *2 + ' Inches';
+        break;
+    }
+
+    document.getElementById('lengthResult').innerHTML = result;
+  }
+
+  function convertTemperature() {
+    let tempInput = parseFloat(document.getElementById('tempInput').value);
+    let tempUnit = document.getElementById('tempUnit').value;
+    let result;
+
+    switch (tempUnit) {
+      case 'celsius':
+        result = tempInput + ' Celsius';
+        break;
+      case 'fahrenheit':
+        result = ((tempInput * 9/5) + 32) *2 + ' Fahrenheit';
+        break;
+    }
+
+    document.getElementById('tempResult').innerHTML = result;
+  }
+
+  function start(){
+            let weight=document.getElementById('weight').value;
+
+            if(weight=="kil"){
+                killotoOther()
+            }
+            else if(weight=="po"){
+                PoundtoOther()
+            }
+            else{
+                GramstoOther()
+            }
+
+        }
+        function GramstoOther(){
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+            if(weightUnit=="kilograms"){
+                result.value=weightInput/1000+"killograms"
+            }
+           else if(weightUnit=="pounds"){
+                result.value=weightInput/453.592+"pounds"
+            }
+            else if(weightUnit=="grams"){
+                result.value=weightInput+"grams"
+            }
+            else{
+                alert("wrong entries")
+            }
+        }
+
+        function PoundtoOther(){
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+            if(weightUnit=="kilograms"){
+                result.value=weightInput/2.2+"killograms"
+            }
+           else if(weightUnit=="pound"){
+                result.value=weightInput+"pounds"
+            }
+            else if(weightUnit=="grams"){
+                result.value=weightInput*453.592+"grams"
+            }
+            else{
+                alert("wrong entries")
+            }
+        }
+
+        function killotoOther() {
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+
+            switch (weightUnit) {
+                case "kilograms":
+                    result.value = weightInput + " Kilograms";
+                    break;
+                case "pounds":
+                    result.value = weightInput * 2.2+ " Pounds";
+                    break;
+                case "grams":
+                    result.value = weightInput * 1000+ " grams";
+                    break;
+            }
+    
+            document.getElementById("weightResult").innerHTML = result;
+        }
+  
+</script>
+
+</body>
+</html>

@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do List</title>
-    <!-- <style>
+    <style>
       ul {
         list-style: none;
       }
+
       .container {
         width: 650px;
         height: 600px;
@@ -15,6 +16,7 @@
         background-color: white;
         overflow-y: scroll;
       }
+
       .li {
         border: 1px solid black;
         margin: 12px;
@@ -25,22 +27,34 @@
         background: aqua;
         justify-content: space-between;
       }
+
+      .li.done {
+        background: grey;
+      }
+
       body {
         background-color: aqua;
       }
+
       .add-item {
         margin-top: 10%;
       }
-      .btn,button {
+
+      .btn,
+      button {
         height: 30px;
         background-color: aquamarine;
         cursor: pointer;
       }
+
       input {
         height: 30px;
         width: 230px;
       }
-    </style> -->
+      .remove {
+        background-color: red;
+      }
+    </style>
   </head>
   <body>
     <center>
@@ -57,24 +71,40 @@
       </div>
     </center>
     <script>
-      let addTsak = document.getElementById("addtask");
+      let addTask = document.getElementById("addtask");
       let input = document.getElementById("input-task");
-      let done = document.getElementById("Done");
-      console.log(check);
-      addTsak.addEventListener("click", function () {
-
+      let undone = document.getElementById("Undone");
+      addTask.addEventListener("click", function () {
         let task = input.value;
-        let x = document.createElement("li");
-        let y = document.createElement("button");
-        x.classList.add("li")
-        y.classList.add("btn")
-        y.innerHTML="done";
-        x.innerHTML = task;
-        // console.log(x);
-        undone.appendChild(x);
-        x.appendChild(y);
+        if (task == "") {
+          alert("please enter task");
+        } else {
+          let listItem = document.createElement("li");
+          let button = document.createElement("button");
+          listItem.classList.add("li");
+          button.classList.add("btn");
+          button.innerHTML = "done";
+          let flag = 0;
+          button.addEventListener("click", function () {
+            if (flag == 0) {
+              // Toggle the 'done' class to change background color to grey
+              listItem.classList.add("remove");
+              button.innerHTML = "repet";
+              flag=1;
+            } else {
+               listItem.classList.remove("remove");
+            //   button.classList.add("btn")
+              button.innerHTML = "done";
+              flag=0;
+            }
+          });
+          listItem.innerHTML = task;
+          listItem.appendChild(button);
+          undone.appendChild(listItem);
+          // Clear the input field
+          input.value = "";
+        }
       });
-
     </script>
   </body>
 </html>

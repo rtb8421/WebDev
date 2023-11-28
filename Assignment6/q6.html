@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Institution Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-size: 12px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Medical Institution Admission Form</h1>
+    </header>
+
+    <section>
+        <form id="admissionForm">
+            <h2>Personal Information</h2>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <h2>Academic Details</h2>
+
+            <label for="previousQualification">Previous Qualification:</label>
+            <input type="text" id="previousQualification" name="previousQualification" required>
+
+            <label for="marks">Percentage/CGPA:</label>
+            <input type="text" id="marks" name="marks" required>
+
+            <h2>Course Selection</h2>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select Course</option>
+                <option value="mbbs">MBBS</option>
+                <option value="bds">BDS</option>
+                
+            </select>
+
+            <button type="button" onclick="submitAdmission()">Submit Admission Form</button>
+        </form>
+
+        <div id="result"></div>
+    </section>
+
+</body>
+</html>

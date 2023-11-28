@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Weight Converter</legend>
+        <input type="number" onkeyup="start()" id="weightInput" placeholder="Enter Weight" />
+        <select  id="weight">
+            <option value="kil">Kilograms</option>
+            <option value="po">Pounds</option>
+            <option value="grm">grams</option>
+        </select>
+        to
+        <select onchange="start()" id="weightUnit">
+            <option value="kilograms">Kilograms</option>
+            <option value="pounds">Pounds</option>
+            <option value="grams">grams</option>
+        </select>
+        <input type="text" id="weightResult" placeholder="result">
+       
+    </fieldset>
+
+    <script>
+        function start(){
+            let weight=document.getElementById('weight').value;
+
+            if(weight=="kil"){
+                killotoOther()
+            }
+            else if(weight=="po"){
+                PoundtoOther()
+            }
+            else{
+                GramstoOther()
+            }
+
+        }
+        function GramstoOther(){
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+            if(weightUnit=="kilograms"){
+                result.value=weightInput/1000+"killograms"
+            }
+           else if(weightUnit=="pounds"){
+                result.value=weightInput/453.592+"pounds"
+            }
+            else if(weightUnit=="grams"){
+                result.value=weightInput+"grams"
+            }
+            else{
+                alert("wrong entries")
+            }
+        }
+
+
+        function PoundtoOther(){
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+            if(weightUnit=="kilograms"){
+                result.value=weightInput/2.2+"killograms"
+            }
+           else if(weightUnit=="pound"){
+                result.value=weightInput+"pounds"
+            }
+            else if(weightUnit=="grams"){
+                result.value=weightInput*453.592+"grams"
+            }
+            else{
+                alert("wrong entries")
+            }
+        }
+
+
+
+        function killotoOther() {
+            let weightInput =document.getElementById("weightInput").value;
+            let weightUnit = document.getElementById("weightUnit").value;
+            let result=document.getElementById("weightResult");
+
+            switch (weightUnit) {
+                case "kilograms":
+                    result.value = weightInput + " Kilograms";
+                    break;
+                case "pounds":
+                    result.value = weightInput * 2.2+ " Pounds";
+                    break;
+                case "grams":
+                    result.value = weightInput * 1000+ " grams";
+                    break;
+            }
+    
+            document.getElementById("weightResult").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
