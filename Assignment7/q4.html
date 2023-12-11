@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            margin-top: 10%;
+            font-size: 25px;
+        }
+        div{
+            border: 1px solid black;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+ <center>
+	
+ <div>
+    <h2>Simple Calculator</h2>
+     <label>Enter 1st Number:</label>
+     <input type="number" id="num1" style="width:100px;">
+     <br><br>
+     <label>Enter 2nd Number:</label>
+     <input type="number" id="num2" style="width:100px;">
+  
+     <br><br>
+  
+     <button onclick="addNumbers()">Addition</button><br><br>
+     <button onclick="subtractNumbers()">Subtraction</button><br><br>
+     <button onclick="multiplyNumbers()">Multiplication</button><br><br>
+     <button onclick="divideNumbers()">Division</button>
+  
+     <br>
+  
+     <p id="result"></p>
+ </div>
+ </center>
+ 
+ 
+     <script>
+        function addNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 + num2;
+            document.getElementById("result").innerHTML = "Result (Addition): " + result;
+        }
+ 
+        function subtractNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 - num2;
+            document.getElementById("result").innerHTML = "Result (Subtraction): " + result;
+        }
+ 
+        function multiplyNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 * num2;
+            document.getElementById("result").innerHTML = "Result (Multiplication): " + result;
+        }
+ 
+        function divideNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 !== 0) {
+                var result = num1 / num2;
+                document.getElementById("result").innerHTML = "Result (Division): " + result;
+            } else {
+                document.getElementById("result").innerHTML = "Cannot divide by zero!";
+            }
+        }
+    </script>
+ 
+</body>
+</html>

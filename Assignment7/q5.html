@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+</head>
+<style>
+      .container{
+            border: 2px solid black;
+            width: 400px;
+            height: 450px;
+            background-color: rgb(149, 220, 225);   
+            margin-top: 10%;
+        }
+        body{
+            background-color: white;
+        }
+</style>
+<body>
+    <center>
+        <form action="" class="container">
+            <h1>Candidate Exam Result</h1>
+
+            <label for="">Candidate Name:</label>
+            <input type="text" required><br><br>
+            <label for="">Exam Name:</label>
+            <input type="text" required><br><br>
+            <label for="">Exam Score:</label>
+            <input type="number" required><br><br>
+            <label for="">Result Status:</label>
+            <select name="Result" id="Result" required>
+                <option value="Pass">Pass</option>
+                <option value="Fail">Fail</option> 
+            </select><br><br><br>
+
+            <label for="">Remarks</label>
+            <textarea name="area" id="area" cols="30" rows="5"></textarea><br><br><br>
+
+            <input type="submit" value="Publish Result">
+        </form>
+    </center>
+</body>
+</html>
