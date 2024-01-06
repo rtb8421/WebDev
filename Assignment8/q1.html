@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        li{
+            padding: 0.2%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please fill out the form</h1>
+    <form id="rideform">
+        <ul>
+            <li>First Name: *<input type="text"> </li>
+            <li>Last Name: * <input type="text"> </li>
+            <li>Cell phone Number: * <input type="number"> </li>
+            <li>E-mail: * <input type="email"> </li>
+            <li>Company Name: <input type="text"> </li>
+            <li>Select Vehicle Type: *
+                <select name="" id="">
+                    <option value="">Sedan Town Car</option>
+                    <option value="">SRT viper</option>
+                </select>
+            </li>
+            <li>Pick Up Adress(or airport): * <input type="text"> </li>
+            <li>Drop off Adress(or airport): * <input type="text"> </li>
+            <li>Airline & Flight: * <input type="text"> </li>
+            <li>Number of Passengers: *
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </select>
+            </li>
+            <li>Pick Up Date: * <input type="date"> </li>
+            <li>Pick Up Time: * <input type="time"> </li>
+            <li>How many pices of luggage: * 
+                <input type="radio" name="log" id="A1"> 1-3
+                <input type="radio" name="log" id="A2"> 4-6
+            </li>
+            <li>How did you hear about us ? *
+                <select name="" id="">
+                    <option value="">other</option>
+                    <option value="">Internet</option>
+                </select>
+            </li>
+            <li>Payment Type: * 
+                <input type="radio" name="pay" id="cc">  Credit Card(All major credit card accepted)
+               <input type="radio" name="pay" id="ch">   Cash(Still need credit card for booking) 
+            </li>
+            <li>Credit Card info.: *
+                <select name="" id="">
+                    <option value="">Visa</option>
+                    <option value="">Rupay</option>
+                </select>
+            </li>
+            <li>Card holder first and last name: *<input type="text"> </li>
+            <li>Credit card number: *<input type="number"> </li>
+            <li>Expiry Date: * <input type="date"> </li>
+            <li>CVV: * <input type="number"> </li>
+            <li>Credit card billing system: * <textarea></textarea> </li><br>
+            <button type="button" onclick="submitForm()">Reserve my ride Now!</button>
+        </ul>
+    </form>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("rideform");
+            form.submit();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE library [
+    <!ELEMENT library (book+)>
+    <!ELEMENT book (title, author, genre, price)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT genre (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+<library>
+    <book>
+        <title>Introduction to XML</title>
+        <author>John Doe</author>
+        <genre>Programming</genre>
+        <price>29.99</price>
+    </book>
+    <book>
+        <title>Database Management</title>
+        <author>Jane Smith</author>
+        <genre>Database</genre>
+        <price>39.99</price>
+    </book>
+</library>

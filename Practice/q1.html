@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Page</h2>
+
+    <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" onblur="validateFirstName()">
+        <span id="firstNameError" class="error"></span>
+        <br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" onblur="validateNotEmpty('lastName')">
+        <span id="lastNameError" class="error"></span>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onblur="validatePassword()">
+        <span id="passwordError" class="error"></span>
+        <br>
+
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" onblur="validateEmail()">
+        <span id="emailError" class="error"></span>
+        <br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber" onblur="validateMobileNumber()">
+        <span id="mobileNumberError" class="error"></span>
+        <br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" onblur="validateNotEmpty('address')"></textarea>
+        <span id="addressError" class="error"></span>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateFirstName() {
+            var firstName = document.getElementById("firstName").value;
+            var firstNameError = document.getElementById("firstNameError");
+
+            if (/^[a-zA-Z]+$/.test(firstName) && firstName.length >= 6) {
+                firstNameError.innerHTML = "";
+            } else {
+                firstNameError.innerHTML = "Invalid First Name (should contain alphabets and be at least 6 characters long)";
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var passwordError = document.getElementById("passwordError");
+
+            if (password.length >= 6) {
+                passwordError.innerHTML = "";
+            } else {
+                passwordError.innerHTML = "Password should be at least 6 characters long";
+            }
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+
+            if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.innerHTML = "";
+            } else {
+                emailError.innerHTML = "Invalid Email format";
+            }
+        }
+
+        function validateMobileNumber() {
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            var mobileNumberError = document.getElementById("mobileNumberError");
+
+            if (/^\d{10}$/.test(mobileNumber)) {
+                mobileNumberError.innerHTML = "";
+            } else {
+                mobileNumberError.innerHTML = "Mobile Number should contain 10 digits only";
+            }
+        }
+
+        function validateNotEmpty(fieldName) {
+            var fieldValue = document.getElementById(fieldName).value;
+            var errorElement = document.getElementById(fieldName + "Error");
+
+            if (fieldValue.trim() !== "") {
+                errorElement.innerHTML = "";
+            } else {
+                errorElement.innerHTML = fieldName + " should not be empty";
+            }
+        }
+
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+         
+            event.preventDefault(); 
+        });
+    </script>
+
+</body>
+</html>

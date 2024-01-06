@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+       
+        <form action="" id="appform">
+            <center><h1>Application Form</h1></center>
+            <label for="">Full Name</label> 
+            <input type="text" class="lab">
+            <label for="">Email Address</label>
+            <input type="email" class="lab">
+            <label for="">Mobile Number</label>
+            <input type="number" class="lab">
+            <label for="">Country</label>
+            <select name="" id="">
+                <option value="">Canada</option>
+                <option value="">India</option>
+                <option value="">Japan</option>
+            </select> <br>
+            <label for="">Gender</label> <br> <br>
+            <input type="radio" name="gen" id="M"> Male
+            <input type="radio" name="gen" id="F"> Female
+            <br><br>
+            <label for="">Hobbies (optional)</label> <br> <br>
+            <input type="checkbox" name="hob" id="S"> Sport
+            <input type="checkbox" name="hob" id="M"> Movies
+            <input type="checkbox" name="hob" id="U"> Music
+
+            <Button type="button" onclick="submitForm()">Submit</Button>
+        </form>
+
+    </div>
+    <script>
+        function submitForm() {
+            var form = document.getElementById("appform");
+            form.submit();
+        }
+    </script>
+</body>
+</html>

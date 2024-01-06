@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <category name="Appetizers">
+        <item>
+            <name>Crispy fried Chicken</name>
+            <price>$99</price>
+        </item>
+        <item>
+            <name>Chicken Burger</name>
+            <price>$89</price>
+        </item>
+    </category>
+    
+    <category name="Main Courses">
+        <item>
+            <name>Chili Chicken</name>
+            <price>$149</price>
+        </item>
+        <item>
+            <name>Chicken Biryani</name>
+            <price>$199</price>
+        </item>
+    </category>
+    
+    <category name="Desserts">
+        <item>
+            <name>Chocolate Cake</name>
+            <price>$69</price>
+        </item>
+        <item>
+            <name>Cheesecake</name>
+            <price>$49</price>
+        </item>
+    </category>
+</menu>

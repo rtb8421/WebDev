@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <form id="acc" action="">
+    <h1>Sign up Now!</h1>
+    Your Name: <input type="text" id="name"> <br>
+    Password: <input type="password" id="password"> <br>
+    Confirm Password: <input type="password" id="confirmPassword"> <br>
+    <input type="checkbox" id="acceptConditions"> I accept all the license conditions. <br>
+    Specify account type desired: <br>
+    <input type="radio" name="acc" id="a1">Basic($25) <br>
+    <input type="radio" name="acc" id="a2">Standard($50) <br>
+    <input type="radio" name="acc" id="a3">Deluxe($100) <br>
+
+    Select Your operating system:
+    <select id="os" name="os">
+        <option value="Windows">Windows</option>
+        <option value="Linux">Linux</option>
+    </select><br> <br>
+    <button id="signup" onclick="signUp()">Sign Up</button>
+    <button id="reset" onclick="resetForm()">Reset</button>
+</form>
+    <script>
+        function signUp(){
+            var form = document.getElementById("acc");
+            form.submit();
+        }
+
+        function resetForm(){
+            var form = document.getElementById("acc");
+            form.reset();
+        }
+    </script>
+</body>
+</html>

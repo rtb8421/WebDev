@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>Rohan Kumar Patel</name>
+        <position>Web Developer</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>B Ezra William</name>
+        <position>Software Tester</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>3</id>
+        <name>Roshan Rajan Chand</name>
+        <position>Application Developer</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>4</id>
+        <name>Vishal Kumar Bhunjia</name>
+        <position>AI Engineer</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>5</id>
+        <name>Rajat Khamari</name>
+        <position>Marketing Specialist</position>
+        <department>Marketing</department>
+        <salary>65000</salary>
+    </employee>
+    <employee>
+        <id>6</id>
+        <name>Debadatta Mahanta</name>
+        <position>Business Developement Associate</position>
+        <department>Marketing</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>7</id>
+        <name>Cheleswar Rana</name>
+        <position>Fullstack Developer</position>
+        <department>IT</department>
+        <salary>50000</salary>
+    </employee>
+    <employee>
+        <id>8</id>
+        <name>Lotus Kumar Sahu</name>
+        <position>Frontend Developer</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>9</id>
+        <name>Roshan Patel</name>
+        <position>Software Engineear</position>
+        <department>IT</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>10</id>
+        <name>Abhisek Tripathy</name>
+        <position>HR Manager</position>
+        <department>Human Resources</department>
+        <salary>65000</salary>
+    </employee>
+</employees>

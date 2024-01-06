@@ -1,0 +1,58 @@
+body {
+    background-color: #f9fafa;
+    font-family: Verdana;
+    text-align: left;
+}
+
+
+form {
+    background-color:whitesmoke;
+    max-width: 380px;
+    margin: 20px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(17, 1, 1, 0.5);
+}
+
+input {
+    margin-bottom: 10px;
+    
+}
+label{
+    margin-bottom: 10px;
+}
+.lab{
+    border: 1px solid #0a0303;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+select{
+    border: 1px solid #0a0303;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+button {
+    background-color: #070765;
+    border: 1px solid #777;
+    color:white;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

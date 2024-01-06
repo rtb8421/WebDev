@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Page</h2>
+
+    <script>
+        function readParamsFromURL() {
+            var urlParams = new URLSearchParams(window.location.search);
+
+            var username = urlParams.get('username');
+            var password = urlParams.get('password');
+
+            document.write('<p>Username: ' + username + '</p>');
+            document.write('<p>Password: ' + password + '</p>');
+        }
+
+        window.onload = readParamsFromURL;
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squares and Cubes Calculator</title>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Squares and Cubes Calculator</h2>
+  <table>
+    <tr>
+      <th>Number</th>
+      <th>Square</th>
+      <th>Cube</th>
+    </tr>
+
+    <script>
+      for (var i = 0; i <= 10; i++) {
+        document.write('<tr>');
+        document.write('<td>' + i + '</td>');
+        document.write('<td>' + (i * i) + '</td>');
+        document.write('<td>' + (i * i * i) + '</td>');
+        document.write('</tr>');
+      }
+    </script>
+  </table>
+</body>
+</html>
