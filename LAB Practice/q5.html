@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Capitals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    select {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #capitalDisplay {
+      font-size: 18px;
+      font-weight: bold;
+      color: #336699;
+    }
+  </style>
+  <script>
+    function displayCapital() {
+      var countrySelect = document.getElementById('countrySelect');
+      var capitalDisplay = document.getElementById('capitalDisplay');
+
+      var countryCapitals = {
+        'USA': 'Washington, D.C.',
+        'Canada': 'Ottawa',
+        'United Kingdom': 'London',
+        'France': 'Paris',
+        'Germany': 'Berlin'
+      };
+
+      var selectedCountry = countrySelect.value;
+
+      capitalDisplay.textContent = "Capital: " + countryCapitals[selectedCountry];
+    }
+  </script>
+</head>
+<body>
+
+  <label for="countrySelect">Select a Country:</label>
+  <select id="countrySelect" onchange="displayCapital()">
+    <option value="USA">United States</option>
+    <option value="Canada">Canada</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+  </select>
+
+  <p id="capitalDisplay"></p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Pop-up - Multiplication Table</title>
+  <script>
+    function displayMultiplicationTable() {
+      var n = prompt("Enter a number:");
+      n = parseInt(n);
+
+      var table = "";
+      for (var i = 1; i <= 10; i++) {
+        table += n + " x " + i + " = " + (n * i) + "\n";
+      }
+
+      alert("Multiplication Table of " + n + ":\n\n" + table);
+    }
+  </script>
+</head>
+<body>
+
+  <button onclick="displayMultiplicationTable()">Display Multiplication Table</button>
+
+</body>
+</html>

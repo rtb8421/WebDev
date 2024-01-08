@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Pop-up - Sum of Numbers</title>
+  <script>
+    function calculateSum() {
+      var n = prompt("Enter a number:");
+      n = parseInt(n);
+
+      var addAnother = confirm("Do you want to add another number?");
+      if (addAnother) {
+        var additionalNumber = prompt("Enter another number:");
+        additionalNumber = parseInt(additionalNumber);
+        n += additionalNumber;
+      }
+
+      alert("Sum of the numbers is: " + n);
+    }
+  </script>
+</head>
+<body>
+
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+</body>
+</html>
